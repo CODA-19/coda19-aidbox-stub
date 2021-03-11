@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 services:
   devbox:
     image: "${AIDBOX_IMAGE}"
@@ -20,8 +20,19 @@ services:
     ports:
       - "${PGHOSTPORT}:${PGPORT}"
     volumes:
-    - "./pgdata:/data"
+      - "./pgdata:/data"
     environment:
-      POSTGRES_USER:     "${PGUSER}"
+      POSTGRES_USER: "${PGUSER}"
       POSTGRES_PASSWORD: "${PGPASSWORD}"
-      POSTGRES_DB:       "${PGDATABASE}"
+      POSTGRES_DB: "${PGDATABASE}"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - devbox-db
+    ports:
+      - "5555:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
+      PGADMIN_DEFAULT_PASSWORD: admin
+    restart: unless-stopped

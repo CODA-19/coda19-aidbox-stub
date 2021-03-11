@@ -8,6 +8,17 @@ application.
 
 Read more instructions at [Aidbox Documentation page](https://docs.aidbox.app/installation/setup-aidbox.dev)
 
+## Se connecter à la base de données dans pgadmin
+1. Ouvrir pgadmin dans navigateur: http://localhost:5555/
+2. Se connectecter avec user **pgadmin4@pgadmin.org** et password **admin**
+3. Créer une connection au server avec les info suivantes:
+
+Host: host.docker.internal
+Port: ${PGHOSTPORT}
+Maintenance database: ${PGDATABASE}
+Username: ${PGUSER}
+Password: ${PGPASSWORD}
+
 
 ## Notes
 

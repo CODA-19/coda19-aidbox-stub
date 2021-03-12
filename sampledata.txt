@@ -4,6 +4,7 @@ POST /fhir
   "resourceType": "Bundle",
   "type": "transaction",
   "entry": [ {
+    "fullUrl": "urn:uuid:3c7a1e79-163e-b362-4c8d-699c205019e6",
     "resource": {
       "resourceType": "Patient",
       "name": [ {
@@ -26,18 +27,7 @@ POST /fhir
     "fullUrl": "urn:uuid:23e02388-c990-9363-b454-1ca371bad3a1",
     "resource": {
       "resourceType": "Observation",
-      "id": "23e02388-c990-9363-b454-1ca371bad3a1",
-      "meta": {
-        "profile": [ "http://hl7.org/fhir/StructureDefinition/bodyheight", "http://hl7.org/fhir/StructureDefinition/vitalsigns" ]
-      },
       "status": "final",
-      "category": [ {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "code": "vital-signs",
-          "display": "vital-signs"
-        } ]
-      } ],
       "code": {
         "coding": [ {
           "system": "http://loinc.org",
@@ -49,13 +39,10 @@ POST /fhir
       "subject": {
         "reference": "urn:uuid:3c7a1e79-163e-b362-4c8d-699c205019e6"
       },
-      "effectiveDateTime": "2011-04-18T16:28:49-04:00",
       "issued": "2011-04-18T16:28:49.327-04:00",
       "valueQuantity": {
         "value": 134.4,
-        "unit": "cm",
-        "system": "http://unitsofmeasure.org",
-        "code": "cm"
+        "unit": "cm"
       }
     },
     "request": {

@@ -13,6 +13,7 @@ POST /fhir
       } ],
       "gender": "male",
       "birthDate": "2002-04-15",
+      "deceasedBoolean": false,
       "address": [ {
         "city": "Easthampton",
         "state": "MA",

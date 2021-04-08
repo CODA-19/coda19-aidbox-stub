@@ -4,7 +4,7 @@
     "resourceType": "Patient",
     "name": [ {
       "family": "Pouros728",
-      "given": [ "Mauricio81" ],
+      "given": [ "Mauricio81" ]
     } ],
     "gender": "male",
     "birthDate": "2002-04-15",
